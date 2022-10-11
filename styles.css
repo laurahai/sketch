@@ -37,8 +37,17 @@ section {
     gap: 1.25rem;
 }
 
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem
+}
+
 button {
-    padding: 0.2rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
 .grid-container {

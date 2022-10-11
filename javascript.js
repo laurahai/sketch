@@ -32,8 +32,8 @@ function hover() {
 }
 
 /*CHANGE GRID SIZE WITH BUTTON*/
-let btn = document.querySelector('.resize-button')
-btn.addEventListener('click', () => {
+let resizeBtn = document.querySelector('.resize-button')
+resizeBtn.addEventListener('click', () => {
     let userNumber = window.prompt('Please enter a number from 1 to 100');
     while (userNumber < 1 || userNumber > 100) {
         userNumber = prompt('Please ensure the number is between 1 and 100, inclusive');
@@ -50,10 +50,19 @@ btn.addEventListener('click', () => {
     
 });
 
+/*CLEAR GRID*/
+let clearBtn = document.querySelector('.clear-button')
+clearBtn.addEventListener('click', () => {
+    let gridBoxes = document.querySelectorAll('.grid-boxes');
+    gridBoxes.forEach( box => {
+        box.classList.remove('new-bgc');
+    });
+    
+});
 
 /*RESIZE*/
-let clientW = gridContainer.offsetWidth;
-gridContainer.style.height = `${clientW}px`;
+// let clientW = gridContainer.offsetWidth;
+// gridContainer.style.height = `${clientW}px`;
 
 
 
