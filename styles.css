@@ -20,11 +20,10 @@ a, a:visited, a:hover {
 
 /*VARIABLES*/
 
-
 /*STYLES*/
 
 h1 {
-    padding: 3rem;
+    padding-top: 2rem;
     text-align: center;
 }
 
@@ -32,14 +31,24 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 3rem;
 }
 
 .grid-container {
-    width: 700px;
-    height: 50px;
+    width: 500px;
+    height: 500px;
     background-color: grey;
+    display: flex;
+    flex-direction: column;
 }
 
-.grid-boxes {
-    outline: 2px solid black;
+.rows {
+    height: 100%;
+    display: flex;
+}
+
+.columns {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
 }
