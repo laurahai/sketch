@@ -16,17 +16,40 @@ function createGridBoxes(size) {
     }
 }
 
-createGridBoxes(64);
+createGridBoxes(24);
+hover();
 
 /*HOVER*/
 
-let gridBoxes = document.querySelectorAll('.grid-boxes');
+function hover() {
+    let gridBoxes = document.querySelectorAll('.grid-boxes');
+    
+    gridBoxes.forEach( box => {
+        box.addEventListener('mouseover', () => {
+            box.classList.add('new-bgc');
+        })
+    } );
+}
 
-gridBoxes.forEach( box => {
-    box.addEventListener('mouseover', () => {
-        box.classList.add('new-bgc');
-    })
-} );
+/*CHANGE GRID SIZE WITH BUTTON*/
+let btn = document.querySelector('.resize-button')
+btn.addEventListener('click', () => {
+    let userNumber = window.prompt('Please enter a number from 1 to 100');
+    while (userNumber < 1 || userNumber > 100) {
+        userNumber = prompt('Please ensure the number is between 1 and 100, inclusive');
+    }
+    console.log(userNumber);
+
+    let rows = document.querySelectorAll('.rows');
+    rows.forEach( row => {
+        gridContainer.removeChild(row);
+    });
+    
+    createGridBoxes(userNumber);
+    hover();
+    
+});
+
 
 /*RESIZE*/
 let clientW = gridContainer.offsetWidth;

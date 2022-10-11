@@ -23,15 +23,22 @@ a, a:visited, a:hover {
 /*STYLES*/
 
 h1 {
-    padding-top: 2rem;
+    padding: 1.25rem;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    padding-bottom: 2rem;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+button {
+    padding: 0.2rem;
 }
 
 .grid-container {
