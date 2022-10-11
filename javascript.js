@@ -28,5 +28,11 @@ gridBoxes.forEach( box => {
     })
 } );
 
+/*RESIZE*/
+let clientW = gridContainer.offsetWidth;
+gridContainer.style.height = `${clientW}px`;
+
+
+
 
 
