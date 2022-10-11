@@ -1,5 +1,6 @@
 
-var gridContainer = document.querySelector('.grid-container');
+/*GRID*/
+let gridContainer = document.querySelector('.grid-container');
 
 function createGridBoxes(size) {
     for (let i=1; i <= size; i++) {
@@ -9,10 +10,23 @@ function createGridBoxes(size) {
 
         for (let j = 1; j <= size; j++) {
             let column = document.createElement('div');
-            column.classList.add('columns');
+            column.classList.add('grid-boxes');
             row.append(column);
         }
     }
 }
 
-createGridBoxes(16);
+createGridBoxes(64);
+
+/*HOVER*/
+
+let gridBoxes = document.querySelectorAll('.grid-boxes');
+
+gridBoxes.forEach( box => {
+    box.addEventListener('mouseover', () => {
+        box.classList.add('new-bgc');
+    })
+} );
+
+
+
