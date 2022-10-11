@@ -17,3 +17,29 @@ img, picture {
 a, a:visited, a:hover {
     text-decoration: none;
 }
+
+/*VARIABLES*/
+
+
+/*STYLES*/
+
+h1 {
+    padding: 3rem;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container {
+    width: 700px;
+    height: 50px;
+    background-color: grey;
+}
+
+.grid-boxes {
+    outline: 2px solid black;
+}
